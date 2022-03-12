@@ -2,7 +2,6 @@ import 'package:stock_counter_app/widgets/atoms/edit_action_button.dart';
 import 'package:stock_counter_app/widgets/molecules/category_hierarchy.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:stock_counter_app/widgets/molecules/price_label.dart';
 import 'package:stock_counter_app/widgets/organisms/counter.dart';
 import 'package:stock_counter_app/widgets/organisms/item_price_box.dart';
 

@@ -14,11 +14,12 @@ class ItemPriceBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    const double width = 230;
     final textTheme = Theme.of(context).textTheme;
     return Column(
       children: [
         SizedBox(
-          width: 230,
+          width: width,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
@@ -33,7 +34,7 @@ class ItemPriceBox extends StatelessWidget {
         ),
         const SizedBox(height: 4),
         SizedBox(
-          width: 230,
+          width: width,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
