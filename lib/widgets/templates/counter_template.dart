@@ -32,6 +32,9 @@ class CounterTemplate extends HookWidget {
       ),
       body: Column(
         children: [
+          const SizedBox(
+            height: 4,
+          ),
           const CategoryHierarchy(categories: ["道楽", "ルアー"]),
           const SizedBox(height: 20),
           Text("ラッキークラフト", style: textTheme.headline5),
