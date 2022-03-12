@@ -8,7 +8,7 @@ build-web:
 
 .PHONY: run-story
 run-story:
-	monarch run
+	flutter run widgetbook/main.dart -d macOS
 
 .PHONY: run-web
 run-chrome:
