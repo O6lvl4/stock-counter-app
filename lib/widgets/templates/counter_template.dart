@@ -13,14 +13,12 @@ class CounterTemplate extends HookWidget {
     required this.limit,
     required this.itemPrice,
     required this.taxRate,
-    required this.onTap,
   }) : super(key: key);
   final String title;
   final int stockCount;
   final int limit;
   final int itemPrice;
   final double taxRate;
-  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
