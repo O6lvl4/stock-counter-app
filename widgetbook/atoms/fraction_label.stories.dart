@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:stock_counter_app/widgets/atoms/decrement_button.dart';
 import 'package:stock_counter_app/widgets/atoms/fraction_label.dart';
 import 'package:tuple/tuple.dart';
 import 'package:widgetbook/widgetbook.dart';
