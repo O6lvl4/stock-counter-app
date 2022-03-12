@@ -8,6 +8,8 @@ class EditActionButton extends StatelessWidget {
     return FloatingActionButton(
       onPressed: () {},
       tooltip: 'Edit',
+      foregroundColor: Colors.white,
+      backgroundColor: Colors.indigo,
       child: const Icon(Icons.edit),
     );
   }

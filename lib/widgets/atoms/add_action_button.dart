@@ -8,6 +8,8 @@ class AddActionButton extends StatelessWidget {
     return FloatingActionButton(
       onPressed: () {},
       tooltip: 'Increment',
+      foregroundColor: Colors.white,
+      backgroundColor: Colors.indigo,
       child: const Icon(Icons.add),
     );
   }

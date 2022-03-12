@@ -6,10 +6,10 @@ import 'atoms/decrement_button.stories.dart';
 import 'atoms/edit_action_button.stories.dart';
 import 'atoms/fraction_label.stories.dart';
 import 'atoms/increment_button.stories.dart';
-import 'atoms/price_label.dart';
+import 'atoms/amount_label.dart';
 import 'molecules/category_hierarchy.stories.dart';
 import 'organisms/counter.stories.dart';
-import 'templates/increment_template.stories.dart';
+import 'templates/counter_template.stories.dart';
 
 class Storybook extends StatelessWidget {
   const Storybook({Key? key}) : super(key: key);
@@ -18,8 +18,11 @@ class Storybook extends StatelessWidget {
   Widget build(BuildContext context) {
     return Widgetbook(
       defaultTheme: ThemeMode.light,
-      lightTheme: ThemeData.light(),
-      darkTheme: ThemeData.dark(),
+      lightTheme: ThemeData.light().copyWith(
+          primaryColor: Colors.indigo, secondaryHeaderColor: Colors.amber),
+      darkTheme: ThemeData.dark().copyWith(
+          primaryColor: Colors.indigoAccent,
+          secondaryHeaderColor: Colors.amberAccent),
       categories: [
         WidgetbookCategory(
           name: 'atoms',
@@ -29,7 +32,7 @@ class Storybook extends StatelessWidget {
             fractionLabelStories(),
             incrementButtonStories(),
             decrementButtonStories(),
-            priceLabelStories(),
+            amountLabelStories(),
           ],
         ),
         WidgetbookCategory(
@@ -47,7 +50,7 @@ class Storybook extends StatelessWidget {
         WidgetbookCategory(
           name: 'pages',
           widgets: [
-            incrementTemplateStories(),
+            counterTemplateStories(),
           ],
         ),
       ],

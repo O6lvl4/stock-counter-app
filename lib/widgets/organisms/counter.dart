@@ -19,9 +19,10 @@ class Counter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
     return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
       DecrementButton(
-          color: Colors.blue,
+          color: Colors.indigo,
           onPressed: () {
             onPressed(CounterActionType.decrement);
           }),
@@ -29,12 +30,12 @@ class Counter extends StatelessWidget {
       SizedBox(
         width: 200,
         child: FractionLabel(
-            top: Tuple2(topCount, Colors.black),
-            bottom: Tuple2(bottomCount, Colors.black38)),
+            top: Tuple2(topCount, theme.textTheme.titleLarge!.color!),
+            bottom: Tuple2(bottomCount, theme.textTheme.titleLarge!.color!)),
       ),
       const SizedBox(width: 10),
       IncrementButton(
-          color: Colors.blue,
+          color: Colors.indigo,
           onPressed: () {
             onPressed(CounterActionType.increment);
           }),
