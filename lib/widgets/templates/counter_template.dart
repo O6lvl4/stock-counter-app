@@ -37,7 +37,7 @@ class CounterTemplate extends HookWidget {
           Text("ラッキークラフト", style: textTheme.headline5),
           const SizedBox(height: 200),
           SizedBox(
-            width: 210,
+            width: 230,
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
@@ -51,9 +51,17 @@ class CounterTemplate extends HookWidget {
             ),
           ),
           const SizedBox(height: 4),
-          PriceLabel(
-              price: itemPrice * count.value,
-              withTax: (itemPrice * (1 + taxRate)).toInt() * count.value),
+          SizedBox(
+            width: 230,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                PriceLabel(
+                    price: itemPrice * count.value,
+                    withTax: (itemPrice * (1 + taxRate)).toInt() * count.value),
+              ],
+            ),
+          ),
           const SizedBox(height: 20),
           Counter(
             topCount: count.value,
