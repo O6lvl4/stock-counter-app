@@ -10,6 +10,11 @@
       "StackName": "amplify-stockcounterapp-dev-02538",
       "StackId": "arn:aws:cloudformation:ap-northeast-1:981377450937:stack/amplify-stockcounterapp-dev-02538/ade8c230-a218-11ec-8ec4-0a768efa8f1d",
       "AmplifyAppId": "d2jzsraszpqvxh"
+    },
+    "categories": {
+      "auth": {
+        "stockcounterappc28822c4": {}
+      }
     }
   }
 }

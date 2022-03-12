@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:stock_counter_app/widgets/molecules/price_label.dart';
 import 'package:stock_counter_app/widgets/organisms/counter.dart';
+import 'package:stock_counter_app/widgets/organisms/item_price_box.dart';
 
 class CounterTemplate extends HookWidget {
   const CounterTemplate({
@@ -38,32 +39,8 @@ class CounterTemplate extends HookWidget {
           const SizedBox(height: 20),
           Text("ラッキークラフト", style: textTheme.headline5),
           const SizedBox(height: 200),
-          SizedBox(
-            width: 230,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                Text(
-                  "税率: ${(taxRate * 100).toStringAsFixed(1)} %",
-                  style: textTheme.overline!.copyWith(
-                    color: textTheme.overline!.color!.withOpacity(0.7),
-                  ),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 4),
-          SizedBox(
-            width: 230,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                PriceLabel(
-                    price: itemPrice * count.value,
-                    withTax: (itemPrice * (1 + taxRate)).toInt() * count.value),
-              ],
-            ),
-          ),
+          ItemPriceBox(
+              itemPrice: itemPrice, itemCount: count.value, taxRate: taxRate),
           const SizedBox(height: 20),
           Counter(
             topCount: count.value,

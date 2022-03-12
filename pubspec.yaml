@@ -19,6 +19,10 @@ dependencies:
   tuple: ^2.0.0
   flutter_breadcrumb: ^1.0.1
 
+  amplify_auth_cognito: ^0.4.0
+  amplify_authenticator: ^0.1.0
+  amplify_flutter: ^0.4.0
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
