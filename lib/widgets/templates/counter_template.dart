@@ -29,6 +29,7 @@ class CounterTemplate extends HookWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text(title),
+        backgroundColor: Colors.indigo,
       ),
       body: Column(
         children: [
